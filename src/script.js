@@ -4,6 +4,9 @@ function displayTemperature(response) {
     let cityElement = document.querySelector("#current-city");
 let descriptionElement = document.querySelector("#current-date")
 
+console.log(response.data.condition.current-date);
+
+
 
     cityElement.innerHTML = response.data.city;
     descriptionElement.innerHTML = response.data.condition.current-date;
