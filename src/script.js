@@ -9,7 +9,7 @@ console.log(response.data.condition.description);
 
 
     cityElement.innerHTML = response.data.city;
-    descriptionElement.innerHTML = response.data.condition.current-date;
+    descriptionElement.innerHTML = response.data.description;
     temperatureElement.innerHTML = temperature;
   }
   
