@@ -5,6 +5,8 @@ function displayTemperature(response) {
 let descriptionElement = document.querySelector("#current-date");
 let humidityElement = document.querySelector("#humidity");
 let windElement = document.querySelector("#wind-speed");
+let timeElement = document.querySelector("#time");
+let date = new Date(response.data.time * 1000);
 
 console.log(response.data.condition.description);
 
@@ -14,6 +16,7 @@ console.log(response.data.condition.description);
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windElement.innerHTML = `${response.data.wind.speed}km/h`
+    timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`
     temperatureElement.innerHTML = temperature;
   }
   
