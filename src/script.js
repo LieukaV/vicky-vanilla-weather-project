@@ -12,7 +12,7 @@ let iconElement = document.querySelector("#icon")
 
 console.log(response.data.condition.description);
 
-iconElement.innerHTML `<img src="${response.condition.icon_url}" class="current-temperature-icon"/>`
+iconElement.innerHTML `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`
     cityElement.innerHTML = response.data.city;
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
