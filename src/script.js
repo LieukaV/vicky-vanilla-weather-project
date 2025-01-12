@@ -16,8 +16,20 @@ console.log(response.data.condition.description);
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windElement.innerHTML = `${response.data.wind.speed}km/h`
-    timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`
+    timeElement.innerHTML = formatDate(date);
     temperatureElement.innerHTML = temperature;
+  }
+
+
+  function formatDate(date) {
+    
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
+    let days = ["Sunday","Monday","Tuesday","Wednesdsay","Thursday","Friday","Saturday"]
+
+    let day = days[date.getDay()];
+
+    return `${day} ${hours}:${minutes} `;
   }
   
   function search(event) {
