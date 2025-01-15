@@ -74,6 +74,31 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
     let formattedDay = days[day];
     return `${formattedDay} ${hours}:${minutes}`;
   }
+
+
+  function forecastDisplay() {
+    let forecast = document.querySelector("#forecast")
+
+    let days = ["Mon","Tue","Wed","Thurs","Friday"];
+    let forecastHtml = "";
+
+    days.forEach(function(day) {
+      forecastHtml = forecastHtml +`
+      <div class="forecast-day-weather">
+                <div class="forecast-date-weather">${day}</div>
+                <div class="forecast-icon-weather">☀️</div>
+                <div class="forecast-temperatures-weather">
+                  <div class="temperature-forecast-class"><strong >20°</strong></div>
+                  <div class="temperature-forecast-class">10°</div>
+              </div>
+              </div>`;
+    }
+  );
+
+  forecastElement.innerHTML = forecastHtml;
+  }
+
+ 
   
   let searchForm = document.querySelector("#search-form");
   searchForm.addEventListener("submit", search);
@@ -83,3 +108,6 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
   
   currentDateELement.innerHTML = formatDate(currentDate);
   
+  forecastDisplay();
+
+ 
