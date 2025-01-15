@@ -89,11 +89,7 @@ body {
     top: -38px;
   }
 
-  .Forecast-weather{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
+  
 
 .forecast-date-weather {
   text-align: center;
