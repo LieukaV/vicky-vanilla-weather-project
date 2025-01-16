@@ -75,6 +75,20 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
     return `${formattedDay} ${hours}:${minutes}`;
   }
 
+  function forecastDisplay() {
+    let forecast = document.querySelector("#forecast");
+
+    forecast.innerHTML = `
+     <div class="forecast-day-weather">
+                    <div class="forecast-date-weather">Mon</div>
+                    <div class="forecast-icon-weather">☀️</div>
+                    <div class="forecast-temperatures-weather">
+                      <div class="temperature-forecast-class"><strong >20°</strong></div>
+                      <div class="temperature-forecast-class">10°</div>
+                  </div>
+                  </div>`;
+      
+  }
 
  
 
@@ -88,16 +102,5 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
   
   currentDateELement.innerHTML = formatDate(currentDate);
   
- 
-let forecast = document.querySelector("#forecast");
-
-forecast.innerHTML = `
- <div class="forecast-day-weather">
-                <div class="forecast-date-weather">Mon</div>
-                <div class="forecast-icon-weather">☀️</div>
-                <div class="forecast-temperatures-weather">
-                  <div class="temperature-forecast-class"><strong >20°</strong></div>
-                  <div class="temperature-forecast-class">10°</div>
-              </div>
-              </div>`;
+  forecastDisplay();
  
