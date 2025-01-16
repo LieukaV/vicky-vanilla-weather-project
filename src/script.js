@@ -82,9 +82,7 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
     console.log(apiUrl)
   }
 
-  function forecastDisplay(response) {
-
-console.log(response.data)
+  function forecastDisplay() {
 
     let forecastElement = document.querySelector("#forecast");
 
@@ -117,6 +115,6 @@ console.log(response.data)
   let currentDate = new Date();
   
   currentDateELement.innerHTML = formatDate(currentDate);
-  
+  receiveForecast("Paris");
   forecastDisplay();
  
