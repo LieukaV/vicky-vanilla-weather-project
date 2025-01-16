@@ -83,7 +83,7 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
     days.forEach(function(day){
       forecast.innerHTML = `
       <div class="forecast-day-weather">
-                     <div class="forecast-date-weather">Mon</div>
+                     <div class="forecast-date-weather">${day}</div>
                      <div class="forecast-icon-weather">☀️</div>
                      <div class="forecast-temperatures-weather">
                        <div class="temperature-forecast-class"><strong >20°</strong></div>
