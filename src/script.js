@@ -117,6 +117,6 @@ console.log(response.data)
   let currentDate = new Date();
   
   currentDateELement.innerHTML = formatDate(currentDate);
-  receiveForecast("Paris");
+  
   forecastDisplay();
  
