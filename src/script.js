@@ -78,15 +78,19 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
   function forecastDisplay() {
     let forecast = document.querySelector("#forecast");
 
-    forecast.innerHTML = `
-     <div class="forecast-day-weather">
-                    <div class="forecast-date-weather">Mon</div>
-                    <div class="forecast-icon-weather">☀️</div>
-                    <div class="forecast-temperatures-weather">
-                      <div class="temperature-forecast-class"><strong >20°</strong></div>
-                      <div class="temperature-forecast-class">10°</div>
-                  </div>
-                  </div>`;
+    let days = ["Mon","Tue","Wed","Thu","Fri"]
+
+    days.forEach(function(day){
+      forecast.innerHTML = `
+      <div class="forecast-day-weather">
+                     <div class="forecast-date-weather">Mon</div>
+                     <div class="forecast-icon-weather">☀️</div>
+                     <div class="forecast-temperatures-weather">
+                       <div class="temperature-forecast-class"><strong >20°</strong></div>
+                       <div class="temperature-forecast-class">10°</div>
+                   </div>
+                   </div>`;
+    });
       
   }
 
