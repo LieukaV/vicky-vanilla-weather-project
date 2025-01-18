@@ -75,12 +75,7 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
     return `${formattedDay} ${hours}:${minutes}`;
   }
 
-  function receiveForecast(city) {
-    let apiKey = "79a2etb100ec8d0o4359f0b1e87486a0";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiUrl}`;
-    
-  }
-
+  
   function forecastDisplay() {
 
     let forecastElement = document.querySelector("#forecast");
