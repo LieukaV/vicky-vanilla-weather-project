@@ -109,6 +109,6 @@ iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="c
   let currentDate = new Date();
   
   currentDateELement.innerHTML = formatDate(currentDate);
-  receiveForecast("Paris");
+  
   forecastDisplay();
  
